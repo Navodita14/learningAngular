@@ -1,0 +1,18 @@
+.navbar{
+    display: flex;
+    background-color: rgb(3, 127, 209);
+    height: 50px;
+}
+.site_name{
+    color: aliceblue;
+    padding: 15px 10px;
+}
+.site-menu{
+    padding: 15px 10px;
+    margin-left: 0px;
+}
+a{
+    text-decoration: none;
+    color: bisque;
+    margin: 0px 10px;
+}

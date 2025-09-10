@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  height: 100vh;
+ 
+
+}
+
+.slogan {
+  width: 15%;
+  height: 100%;
+  padding: 100px;
+}
+
+.image {
+  width: 85%;
+  height: 100%;
+  padding: 40px 0px;
+}
