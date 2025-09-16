@@ -6,3 +6,12 @@
 <div>
     <p>{{searchValue}}</p>
 </div>
+
+<div class="search-div">
+    <span><b>Search:
+    </b></span>
+    <input type="text"[ngClass]="{changeBg: searchValue2 !=''}" [(ngModel)]="searchValue2">
+</div>
+<div>
+    <p *ngIf="searchValue2!= ''">You searched for"{{searchValue2}}"</p>
+</div>

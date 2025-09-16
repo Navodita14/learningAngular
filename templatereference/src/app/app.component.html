@@ -1,0 +1,7 @@
+<input type="text" #myVariable (keyup)="0">
+<button (click)="sayHello(myVariable)">Say hello</button>
+<p>{{myVariable.value}}</p>
+
+<app-customer-list #customer></app-customer-list>
+
+<p>You have selected {{customer.selectedCustomer?.name}}</p>

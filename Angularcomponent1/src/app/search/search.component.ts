@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-search',
@@ -16,4 +17,6 @@ export class SearchComponent implements OnInit {
   onChange(event:Event){
     this.searchValue= (<HTMLInputElement>event.target).value
   }
+
+  searchValue2="Samsung"
 }
