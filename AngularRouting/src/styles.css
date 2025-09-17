@@ -1,0 +1,14 @@
+
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #efefef;
+}
+.active{
+    background-color: #777;
+}
