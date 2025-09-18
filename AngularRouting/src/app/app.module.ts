@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CourseGaurdService } from './Services/course-gaurd.service';
 import { AuthServiceService } from './Services/auth-service.service';
 import { CandeactivateGaurdService } from './Services/candeactivate-gaurd.service';
+import { CourseResolveService } from './Services/course-resolve.service';
 
 
 
@@ -31,7 +32,7 @@ import { CandeactivateGaurdService } from './Services/candeactivate-gaurd.servic
     AppRoutingModule,
     FormsModule
   ],
-  providers: [CourseGaurdService, AuthServiceService, CandeactivateGaurdService],
+  providers: [CourseGaurdService, AuthServiceService, CandeactivateGaurdService, CourseResolveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

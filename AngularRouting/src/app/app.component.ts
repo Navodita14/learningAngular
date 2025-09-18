@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from './Services/service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { AuthServiceService } from './Services/auth-service.service';
 
 @Component({
@@ -11,8 +11,9 @@ import { AuthServiceService } from './Services/auth-service.service';
 })
 export class AppComponent implements OnInit{
   title = 'AngularRouting';
-  constructor(private courseService: ServiceService, private acticatedRoute: ActivatedRoute, private authService: AuthServiceService){}
+  constructor(private courseService: ServiceService, private acticatedRoute: ActivatedRoute, private authService: AuthServiceService, private router:Router){}
   
+  displayLoadingIndicator=false;
 
   courses:any[] = [];
 
@@ -24,6 +25,19 @@ export class AppComponent implements OnInit{
     //   }
       
     // })
+
+    this.router.events.subscribe((routerEvent)=>{
+      if(routerEvent instanceof NavigationStart){
+        this.displayLoadingIndicator=true
+      }
+
+      if(routerEvent instanceof NavigationEnd || routerEvent instanceof NavigationCancel ||
+        routerEvent instanceof NavigationError
+      ){
+ 
+       this.displayLoadingIndicator=false
+      }
+    })
   }
 
   isLogin=this.authService.IsAuthenticated()
